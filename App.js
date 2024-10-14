@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Provider as PaperProvider } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import AuthScreen from './screens/AuthScreen';
-import MainTabNavigator from './navigation/MainTabNavigator';
+import AuthScreen from './src/screens/AuthScreen';
+import MainTabNavigator from './src/navigation/MainTabNavigator';
 
 const Stack = createStackNavigator();
 
