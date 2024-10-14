@@ -41,3 +41,26 @@ export const getProgress = async () => {
   await new Promise(resolve => setTimeout(resolve, 500));
   return mockProgress;
 };
+
+// Update src/services/api.js to include new methods
+export const getPhonemes = async () => {
+  // Implement API call to fetch phonemes
+  // For now, return mock data
+  return [
+    { id: 1, symbol: 'æ', example: 'cat' },
+    { id: 2, symbol: 'ð', example: 'this' },
+    { id: 3, symbol: 'ʃ', example: 'ship' },
+    // Add more phonemes...
+  ];
+};
+
+export const getTopics = async () => {
+  // Implement API call to fetch topics
+  // For now, return mock data
+  return [
+    { id: 1, name: 'Greetings', description: 'Learn common greetings' },
+    { id: 2, name: 'Food and Dining', description: 'Vocabulary for restaurants and cooking' },
+    { id: 3, name: 'Travel', description: 'Essential phrases for travelers' },
+    // Add more topics...
+  ];
+};
