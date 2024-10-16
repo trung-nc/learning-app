@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import AuthScreen from './src/screens/AuthScreen';
 import MainTabNavigator from './src/navigation/MainTabNavigator';
+import PronunciationScreen from './src/screens/PronunciationScreen';
 
 const Stack = createStackNavigator();
 
@@ -38,7 +39,17 @@ export default function App() {
         {userToken == null ? (
           <Stack.Screen name="Auth" component={AuthScreen} />
         ) : (
-          <Stack.Screen name="Main" component={MainTabNavigator} />
+          <>
+            <Stack.Screen name="Main" component={MainTabNavigator} />
+            <Stack.Screen 
+              name="Pronunciation" 
+              component={PronunciationScreen}
+              options={{ 
+                headerShown: false,
+                presentation: 'PronunciationScreen'
+              }}
+            />
+          </>
         )}
       </Stack.Navigator>
     </NavigationContainer>
